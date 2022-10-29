@@ -9,8 +9,8 @@ namespace BancoDeTiempo
     public class Anuncio
     {
 
-        public int Id { get; set; }
-        public Categoria categoria { get; set; }
+        public int anuncioId { get; set; }
+        public string categoria { get; set; }
         public string descripcion { get; set; }
         public DateTime fecha { get; set; }
 
