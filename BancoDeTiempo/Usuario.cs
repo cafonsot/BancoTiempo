@@ -17,6 +17,5 @@ namespace BancoDeTiempo
         public int horasAcumuladas { get; set; }
         public string contraseña { get; set; }
 
-
     }
 }
