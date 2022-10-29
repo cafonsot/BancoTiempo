@@ -56,11 +56,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Anuncio.cs" />
-    <Compile Include="BancoDeTiempoDBDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>BancoDeTiempoDBDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Categoria.cs" />
     <Compile Include="Demanda.cs" />
     <Compile Include="Model1.Context.cs">
@@ -104,17 +99,7 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Model1.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="BancoDeTiempoDBDataSet.xsc">
-      <DependentUpon>BancoDeTiempoDBDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="BancoDeTiempoDBDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>BancoDeTiempoDBDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="BancoDeTiempoDBDataSet.xss">
-      <DependentUpon>BancoDeTiempoDBDataSet.xsd</DependentUpon>
-    </None>
+    <None Include="App.Config" />
     <None Include="Model1.edmx.diagram">
       <DependentUpon>Model1.edmx</DependentUpon>
     </None>
@@ -130,22 +115,19 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Model1.Context.cs</LastGenOutput>
       <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
     </Content>
     <Content Include="Model1.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
