@@ -25,5 +25,10 @@ namespace BancoDeTiempo
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<Anuncio> Anuncio { get; set; }
+        public virtual DbSet<Categoria> Categoria { get; set; }
+        public virtual DbSet<Demanda> Demanda { get; set; }
+        public virtual DbSet<Oferta> Oferta { get; set; }
+        public virtual DbSet<Usuario> Usuario { get; set; }
     }
 }

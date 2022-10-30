@@ -4,7 +4,13 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="84f0fe474c3f4833b6e063c16e35a519" Name="Diagram1" />
+      <Diagram DiagramId="99434565bf1c4c53b9b374e2e870347b" Name="Diagram1">
+        <EntityTypeShape EntityType="BancoDeTiempoDBModel.Anuncio" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BancoDeTiempoDBModel.Categoria" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BancoDeTiempoDBModel.Demanda" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BancoDeTiempoDBModel.Oferta" Width="1.5" PointX="2.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BancoDeTiempoDBModel.Usuario" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+      </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
 </edmx:Edmx>

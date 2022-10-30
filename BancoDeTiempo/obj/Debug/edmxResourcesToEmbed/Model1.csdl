@@ -1,4 +1,53 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="BancoDeTiempoDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-  <EntityContainer Name="BancoDeTiempoDBEntities" annotation:LazyLoadingEnabled="true" />
+  <EntityType Name="Anuncio">
+    <Key>
+      <PropertyRef Name="idAnuncio" />
+    </Key>
+    <Property Name="idAnuncio" Type="Int32" Nullable="false" />
+    <Property Name="Categoria" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Descripcion" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Fecha" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Categoria">
+    <Key>
+      <PropertyRef Name="idCategoria" />
+    </Key>
+    <Property Name="idCategoria" Type="Int32" Nullable="false" />
+    <Property Name="TipoServicio" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Demanda">
+    <Key>
+      <PropertyRef Name="idDemanda" />
+    </Key>
+    <Property Name="idDemanda" Type="Int32" Nullable="false" />
+    <Property Name="Horas" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Oferta">
+    <Key>
+      <PropertyRef Name="idOferta" />
+    </Key>
+    <Property Name="idOferta" Type="Int32" Nullable="false" />
+    <Property Name="Horas" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Usuario">
+    <Key>
+      <PropertyRef Name="UsuarioId" />
+    </Key>
+    <Property Name="UsuarioId" Type="Int32" Nullable="false" />
+    <Property Name="Nombre" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Apellido1" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Apellido2" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Telefono" Type="Int32" />
+    <Property Name="HorasAcumuladas" Type="Int32" />
+    <Property Name="Contraseña" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="BancoDeTiempoDBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Anuncio" EntityType="Self.Anuncio" />
+    <EntitySet Name="Categoria" EntityType="Self.Categoria" />
+    <EntitySet Name="Demanda" EntityType="Self.Demanda" />
+    <EntitySet Name="Oferta" EntityType="Self.Oferta" />
+    <EntitySet Name="Usuario" EntityType="Self.Usuario" />
+  </EntityContainer>
 </Schema>

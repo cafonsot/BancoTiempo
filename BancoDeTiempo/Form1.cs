@@ -15,9 +15,13 @@ namespace BancoDeTiempo
         public Form1()
         {
             InitializeComponent();
+            using (BancoDeTiempoDBEntities db = new BancoDeTiempoDBEntities())
+            {
+                dataGridView1.DataSource = db.Usuario.ToList();
+            }
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
