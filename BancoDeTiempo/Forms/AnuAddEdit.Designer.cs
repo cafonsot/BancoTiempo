@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.textCategoria = new System.Windows.Forms.TextBox();
             this.textDescripcion = new System.Windows.Forms.TextBox();
@@ -35,6 +36,8 @@
             this.textFecha = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.anuncioBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.anuncioBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -48,6 +51,7 @@
             // 
             // textCategoria
             // 
+            this.textCategoria.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.anuncioBindingSource, "Categoria", true));
             this.textCategoria.Location = new System.Drawing.Point(86, 48);
             this.textCategoria.Name = "textCategoria";
             this.textCategoria.Size = new System.Drawing.Size(202, 20);
@@ -56,6 +60,7 @@
             // 
             // textDescripcion
             // 
+            this.textDescripcion.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.anuncioBindingSource, "Descripcion", true));
             this.textDescripcion.Location = new System.Drawing.Point(86, 74);
             this.textDescripcion.Multiline = true;
             this.textDescripcion.Name = "textDescripcion";
@@ -74,6 +79,7 @@
             // 
             // textFecha
             // 
+            this.textFecha.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.anuncioBindingSource, "Fecha", true));
             this.textFecha.Location = new System.Drawing.Point(86, 125);
             this.textFecha.Name = "textFecha";
             this.textFecha.Size = new System.Drawing.Size(202, 20);
@@ -91,12 +97,17 @@
             // 
             // button1
             // 
+            this.button1.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.button1.Location = new System.Drawing.Point(182, 157);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(106, 23);
             this.button1.TabIndex = 6;
             this.button1.Text = "Aplicar Cambios";
             this.button1.UseVisualStyleBackColor = true;
+            // 
+            // anuncioBindingSource
+            // 
+            this.anuncioBindingSource.DataSource = typeof(BancoDeTiempo.Anuncio);
             // 
             // AnuAddEdit
             // 
@@ -114,6 +125,8 @@
             this.MinimizeBox = false;
             this.Name = "AnuAddEdit";
             this.Text = "AnuAddEdit";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.AnuAddEdit_FormClosing);
+            ((System.ComponentModel.ISupportInitialize)(this.anuncioBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -128,5 +141,6 @@
         private System.Windows.Forms.TextBox textFecha;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.BindingSource anuncioBindingSource;
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.textNombre = new System.Windows.Forms.TextBox();
             this.textApellido1 = new System.Windows.Forms.TextBox();
@@ -43,6 +44,8 @@
             this.textContraseña = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.usuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -57,6 +60,7 @@
             // 
             // textNombre
             // 
+            this.textNombre.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuarioBindingSource, "Nombre", true));
             this.textNombre.Location = new System.Drawing.Point(113, 50);
             this.textNombre.Name = "textNombre";
             this.textNombre.Size = new System.Drawing.Size(235, 20);
@@ -65,6 +69,7 @@
             // 
             // textApellido1
             // 
+            this.textApellido1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuarioBindingSource, "Apellido1", true));
             this.textApellido1.Location = new System.Drawing.Point(113, 76);
             this.textApellido1.Name = "textApellido1";
             this.textApellido1.Size = new System.Drawing.Size(235, 20);
@@ -83,6 +88,7 @@
             // 
             // textApellido2
             // 
+            this.textApellido2.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuarioBindingSource, "Apellido2", true));
             this.textApellido2.Location = new System.Drawing.Point(113, 102);
             this.textApellido2.Name = "textApellido2";
             this.textApellido2.Size = new System.Drawing.Size(235, 20);
@@ -100,6 +106,7 @@
             // 
             // textEmail
             // 
+            this.textEmail.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuarioBindingSource, "Email", true));
             this.textEmail.Location = new System.Drawing.Point(113, 128);
             this.textEmail.Name = "textEmail";
             this.textEmail.Size = new System.Drawing.Size(235, 20);
@@ -117,6 +124,7 @@
             // 
             // textTelefono
             // 
+            this.textTelefono.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuarioBindingSource, "Telefono", true));
             this.textTelefono.Location = new System.Drawing.Point(113, 154);
             this.textTelefono.Name = "textTelefono";
             this.textTelefono.Size = new System.Drawing.Size(235, 20);
@@ -134,6 +142,7 @@
             // 
             // textHorasAcumuladas
             // 
+            this.textHorasAcumuladas.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuarioBindingSource, "HorasAcumuladas", true));
             this.textHorasAcumuladas.Location = new System.Drawing.Point(113, 180);
             this.textHorasAcumuladas.Name = "textHorasAcumuladas";
             this.textHorasAcumuladas.Size = new System.Drawing.Size(235, 20);
@@ -151,6 +160,7 @@
             // 
             // textContraseña
             // 
+            this.textContraseña.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuarioBindingSource, "Contraseña", true));
             this.textContraseña.Location = new System.Drawing.Point(113, 206);
             this.textContraseña.Name = "textContraseña";
             this.textContraseña.Size = new System.Drawing.Size(235, 20);
@@ -168,12 +178,18 @@
             // 
             // button1
             // 
+            this.button1.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.button1.Location = new System.Drawing.Point(244, 243);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(104, 23);
             this.button1.TabIndex = 7;
             this.button1.Text = "Aplicar cambios";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // usuarioBindingSource
+            // 
+            this.usuarioBindingSource.DataSource = typeof(BancoDeTiempo.Usuario);
             // 
             // UsrAddEdit
             // 
@@ -200,6 +216,8 @@
             this.Name = "UsrAddEdit";
             this.Text = "UsrAddEdit";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.UsrAddEdit_FormClosing);
+            this.Load += new System.EventHandler(this.UsrAddEdit_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -222,5 +240,6 @@
         private System.Windows.Forms.TextBox textContraseña;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.BindingSource usuarioBindingSource;
     }
 }
