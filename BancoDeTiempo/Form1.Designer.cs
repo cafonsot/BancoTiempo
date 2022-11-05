@@ -29,21 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.btnUsrAñadir = new System.Windows.Forms.Button();
-            this.btnUsrEditar = new System.Windows.Forms.Button();
-            this.btnUsrEliminar = new System.Windows.Forms.Button();
-            this.btnAnuEliminar = new System.Windows.Forms.Button();
-            this.btnAnuEditar = new System.Windows.Forms.Button();
-            this.btnAnuAñadir = new System.Windows.Forms.Button();
-            this.idAnuncioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.categoriaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descripcionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fechaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.anuncioBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.usuarioIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.apellido1DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -53,10 +40,24 @@
             this.horasAcumuladasDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.contraseñaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.usuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.idAnuncioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.categoriaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descripcionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fechaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.anuncioBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.btnUsrAñadir = new System.Windows.Forms.Button();
+            this.btnUsrEditar = new System.Windows.Forms.Button();
+            this.btnUsrEliminar = new System.Windows.Forms.Button();
+            this.btnAnuEliminar = new System.Windows.Forms.Button();
+            this.btnAnuEditar = new System.Windows.Forms.Button();
+            this.btnAnuAñadir = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.anuncioBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -82,6 +83,58 @@
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
+            // usuarioIdDataGridViewTextBoxColumn
+            // 
+            this.usuarioIdDataGridViewTextBoxColumn.DataPropertyName = "UsuarioId";
+            this.usuarioIdDataGridViewTextBoxColumn.HeaderText = "UsuarioId";
+            this.usuarioIdDataGridViewTextBoxColumn.Name = "usuarioIdDataGridViewTextBoxColumn";
+            // 
+            // nombreDataGridViewTextBoxColumn
+            // 
+            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "Nombre";
+            this.nombreDataGridViewTextBoxColumn.HeaderText = "Nombre";
+            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
+            // 
+            // apellido1DataGridViewTextBoxColumn
+            // 
+            this.apellido1DataGridViewTextBoxColumn.DataPropertyName = "Apellido1";
+            this.apellido1DataGridViewTextBoxColumn.HeaderText = "Apellido1";
+            this.apellido1DataGridViewTextBoxColumn.Name = "apellido1DataGridViewTextBoxColumn";
+            // 
+            // apellido2DataGridViewTextBoxColumn
+            // 
+            this.apellido2DataGridViewTextBoxColumn.DataPropertyName = "Apellido2";
+            this.apellido2DataGridViewTextBoxColumn.HeaderText = "Apellido2";
+            this.apellido2DataGridViewTextBoxColumn.Name = "apellido2DataGridViewTextBoxColumn";
+            // 
+            // emailDataGridViewTextBoxColumn
+            // 
+            this.emailDataGridViewTextBoxColumn.DataPropertyName = "Email";
+            this.emailDataGridViewTextBoxColumn.HeaderText = "Email";
+            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
+            // 
+            // telefonoDataGridViewTextBoxColumn
+            // 
+            this.telefonoDataGridViewTextBoxColumn.DataPropertyName = "Telefono";
+            this.telefonoDataGridViewTextBoxColumn.HeaderText = "Telefono";
+            this.telefonoDataGridViewTextBoxColumn.Name = "telefonoDataGridViewTextBoxColumn";
+            // 
+            // horasAcumuladasDataGridViewTextBoxColumn
+            // 
+            this.horasAcumuladasDataGridViewTextBoxColumn.DataPropertyName = "HorasAcumuladas";
+            this.horasAcumuladasDataGridViewTextBoxColumn.HeaderText = "HorasAcumuladas";
+            this.horasAcumuladasDataGridViewTextBoxColumn.Name = "horasAcumuladasDataGridViewTextBoxColumn";
+            // 
+            // contraseñaDataGridViewTextBoxColumn
+            // 
+            this.contraseñaDataGridViewTextBoxColumn.DataPropertyName = "Contraseña";
+            this.contraseñaDataGridViewTextBoxColumn.HeaderText = "Contraseña";
+            this.contraseñaDataGridViewTextBoxColumn.Name = "contraseñaDataGridViewTextBoxColumn";
+            // 
+            // usuarioBindingSource
+            // 
+            this.usuarioBindingSource.DataSource = typeof(BancoDeTiempo.Usuario);
+            // 
             // dataGridView2
             // 
             this.dataGridView2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -100,6 +153,34 @@
             this.dataGridView2.Size = new System.Drawing.Size(844, 150);
             this.dataGridView2.TabIndex = 1;
             this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
+            // 
+            // idAnuncioDataGridViewTextBoxColumn
+            // 
+            this.idAnuncioDataGridViewTextBoxColumn.DataPropertyName = "idAnuncio";
+            this.idAnuncioDataGridViewTextBoxColumn.HeaderText = "idAnuncio";
+            this.idAnuncioDataGridViewTextBoxColumn.Name = "idAnuncioDataGridViewTextBoxColumn";
+            // 
+            // categoriaDataGridViewTextBoxColumn
+            // 
+            this.categoriaDataGridViewTextBoxColumn.DataPropertyName = "Categoria";
+            this.categoriaDataGridViewTextBoxColumn.HeaderText = "Categoria";
+            this.categoriaDataGridViewTextBoxColumn.Name = "categoriaDataGridViewTextBoxColumn";
+            // 
+            // descripcionDataGridViewTextBoxColumn
+            // 
+            this.descripcionDataGridViewTextBoxColumn.DataPropertyName = "Descripcion";
+            this.descripcionDataGridViewTextBoxColumn.HeaderText = "Descripcion";
+            this.descripcionDataGridViewTextBoxColumn.Name = "descripcionDataGridViewTextBoxColumn";
+            // 
+            // fechaDataGridViewTextBoxColumn
+            // 
+            this.fechaDataGridViewTextBoxColumn.DataPropertyName = "Fecha";
+            this.fechaDataGridViewTextBoxColumn.HeaderText = "Fecha";
+            this.fechaDataGridViewTextBoxColumn.Name = "fechaDataGridViewTextBoxColumn";
+            // 
+            // anuncioBindingSource
+            // 
+            this.anuncioBindingSource.DataSource = typeof(BancoDeTiempo.Anuncio);
             // 
             // textBox1
             // 
@@ -187,86 +268,6 @@
             this.btnAnuAñadir.UseVisualStyleBackColor = true;
             this.btnAnuAñadir.Click += new System.EventHandler(this.btnAnuAñadir_Click);
             // 
-            // idAnuncioDataGridViewTextBoxColumn
-            // 
-            this.idAnuncioDataGridViewTextBoxColumn.DataPropertyName = "idAnuncio";
-            this.idAnuncioDataGridViewTextBoxColumn.HeaderText = "idAnuncio";
-            this.idAnuncioDataGridViewTextBoxColumn.Name = "idAnuncioDataGridViewTextBoxColumn";
-            // 
-            // categoriaDataGridViewTextBoxColumn
-            // 
-            this.categoriaDataGridViewTextBoxColumn.DataPropertyName = "Categoria";
-            this.categoriaDataGridViewTextBoxColumn.HeaderText = "Categoria";
-            this.categoriaDataGridViewTextBoxColumn.Name = "categoriaDataGridViewTextBoxColumn";
-            // 
-            // descripcionDataGridViewTextBoxColumn
-            // 
-            this.descripcionDataGridViewTextBoxColumn.DataPropertyName = "Descripcion";
-            this.descripcionDataGridViewTextBoxColumn.HeaderText = "Descripcion";
-            this.descripcionDataGridViewTextBoxColumn.Name = "descripcionDataGridViewTextBoxColumn";
-            // 
-            // fechaDataGridViewTextBoxColumn
-            // 
-            this.fechaDataGridViewTextBoxColumn.DataPropertyName = "Fecha";
-            this.fechaDataGridViewTextBoxColumn.HeaderText = "Fecha";
-            this.fechaDataGridViewTextBoxColumn.Name = "fechaDataGridViewTextBoxColumn";
-            // 
-            // anuncioBindingSource
-            // 
-            this.anuncioBindingSource.DataSource = typeof(BancoDeTiempo.Anuncio);
-            // 
-            // usuarioIdDataGridViewTextBoxColumn
-            // 
-            this.usuarioIdDataGridViewTextBoxColumn.DataPropertyName = "UsuarioId";
-            this.usuarioIdDataGridViewTextBoxColumn.HeaderText = "UsuarioId";
-            this.usuarioIdDataGridViewTextBoxColumn.Name = "usuarioIdDataGridViewTextBoxColumn";
-            // 
-            // nombreDataGridViewTextBoxColumn
-            // 
-            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "Nombre";
-            this.nombreDataGridViewTextBoxColumn.HeaderText = "Nombre";
-            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
-            // 
-            // apellido1DataGridViewTextBoxColumn
-            // 
-            this.apellido1DataGridViewTextBoxColumn.DataPropertyName = "Apellido1";
-            this.apellido1DataGridViewTextBoxColumn.HeaderText = "Apellido1";
-            this.apellido1DataGridViewTextBoxColumn.Name = "apellido1DataGridViewTextBoxColumn";
-            // 
-            // apellido2DataGridViewTextBoxColumn
-            // 
-            this.apellido2DataGridViewTextBoxColumn.DataPropertyName = "Apellido2";
-            this.apellido2DataGridViewTextBoxColumn.HeaderText = "Apellido2";
-            this.apellido2DataGridViewTextBoxColumn.Name = "apellido2DataGridViewTextBoxColumn";
-            // 
-            // emailDataGridViewTextBoxColumn
-            // 
-            this.emailDataGridViewTextBoxColumn.DataPropertyName = "Email";
-            this.emailDataGridViewTextBoxColumn.HeaderText = "Email";
-            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
-            // 
-            // telefonoDataGridViewTextBoxColumn
-            // 
-            this.telefonoDataGridViewTextBoxColumn.DataPropertyName = "Telefono";
-            this.telefonoDataGridViewTextBoxColumn.HeaderText = "Telefono";
-            this.telefonoDataGridViewTextBoxColumn.Name = "telefonoDataGridViewTextBoxColumn";
-            // 
-            // horasAcumuladasDataGridViewTextBoxColumn
-            // 
-            this.horasAcumuladasDataGridViewTextBoxColumn.DataPropertyName = "HorasAcumuladas";
-            this.horasAcumuladasDataGridViewTextBoxColumn.HeaderText = "HorasAcumuladas";
-            this.horasAcumuladasDataGridViewTextBoxColumn.Name = "horasAcumuladasDataGridViewTextBoxColumn";
-            // 
-            // contraseñaDataGridViewTextBoxColumn
-            // 
-            this.contraseñaDataGridViewTextBoxColumn.DataPropertyName = "Contraseña";
-            this.contraseñaDataGridViewTextBoxColumn.HeaderText = "Contraseña";
-            this.contraseñaDataGridViewTextBoxColumn.Name = "contraseñaDataGridViewTextBoxColumn";
-            // 
-            // usuarioBindingSource
-            // 
-            this.usuarioBindingSource.DataSource = typeof(BancoDeTiempo.Usuario);
-            // 
             // Form1
             // 
             this.ClientSize = new System.Drawing.Size(868, 673);
@@ -280,12 +281,14 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.dataGridView1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
+            this.Text = "Banco De Tiempo";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.anuncioBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

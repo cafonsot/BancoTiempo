@@ -37,6 +37,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.anuncioBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.label4 = new System.Windows.Forms.Label();
+            this.textId = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.anuncioBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -51,7 +53,6 @@
             // 
             // textCategoria
             // 
-            this.textCategoria.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.anuncioBindingSource, "Categoria", true));
             this.textCategoria.Location = new System.Drawing.Point(86, 48);
             this.textCategoria.Name = "textCategoria";
             this.textCategoria.Size = new System.Drawing.Size(202, 20);
@@ -109,11 +110,30 @@
             // 
             this.anuncioBindingSource.DataSource = typeof(BancoDeTiempo.Anuncio);
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(12, 28);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(19, 13);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "Id:";
+            // 
+            // textId
+            // 
+            this.textId.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.anuncioBindingSource, "idAnuncio", true));
+            this.textId.Location = new System.Drawing.Point(86, 25);
+            this.textId.Name = "textId";
+            this.textId.Size = new System.Drawing.Size(202, 20);
+            this.textId.TabIndex = 8;
+            // 
             // AnuAddEdit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(306, 198);
+            this.Controls.Add(this.textId);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textFecha);
             this.Controls.Add(this.label3);
@@ -142,5 +162,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.BindingSource anuncioBindingSource;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox textId;
     }
 }
