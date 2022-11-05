@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="BancoDeTiempoDBModelStoreContainer" CdmEntityContainer="BancoDeTiempoDBEntities">
+    <EntitySetMapping Name="Anuncio">
+      <EntityTypeMapping TypeName="BancoDeTiempoDBModel.Anuncio">
+        <MappingFragment StoreEntitySet="Anuncio">
+          <ScalarProperty Name="idAnuncio" ColumnName="idAnuncio" />
+          <ScalarProperty Name="Categoria" ColumnName="Categoria" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Categoria">
+      <EntityTypeMapping TypeName="BancoDeTiempoDBModel.Categoria">
+        <MappingFragment StoreEntitySet="Categoria">
+          <ScalarProperty Name="idCategoria" ColumnName="idCategoria" />
+          <ScalarProperty Name="TipoServicio" ColumnName="TipoServicio" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Demanda">
+      <EntityTypeMapping TypeName="BancoDeTiempoDBModel.Demanda">
+        <MappingFragment StoreEntitySet="Demanda">
+          <ScalarProperty Name="idDemanda" ColumnName="idDemanda" />
+          <ScalarProperty Name="Horas" ColumnName="Horas" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Oferta">
+      <EntityTypeMapping TypeName="BancoDeTiempoDBModel.Oferta">
+        <MappingFragment StoreEntitySet="Oferta">
+          <ScalarProperty Name="idOferta" ColumnName="idOferta" />
+          <ScalarProperty Name="Horas" ColumnName="Horas" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Usuario">
+      <EntityTypeMapping TypeName="BancoDeTiempoDBModel.Usuario">
+        <MappingFragment StoreEntitySet="Usuario">
+          <ScalarProperty Name="UsuarioId" ColumnName="UsuarioId" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Apellido1" ColumnName="Apellido1" />
+          <ScalarProperty Name="Apellido2" ColumnName="Apellido2" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+          <ScalarProperty Name="HorasAcumuladas" ColumnName="HorasAcumuladas" />
+          <ScalarProperty Name="Contraseña" ColumnName="Contraseña" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

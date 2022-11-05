@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BancoDeTiempoDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errores durante la generación:
+advertencia 6013: La tabla o vista 'BancoDeTiempoDB.dbo.Anuncio' no tiene definida una clave principal y no es posible inferir ninguna clave principal válida. Esta tabla o vista se ha excluido. Para usar la entidad, necesitará revisar el esquema, agregar las claves correctas y quitar sus comentarios.
+        <EntityType Name="Anuncio">
+          <Property Name="AnuncioId" Type="int" />
+          <Property Name="Categoria" Type="varchar" MaxLength="20" />
+          <Property Name="Descripcion" Type="varchar" MaxLength="20" />
+          <Property Name="Fecha" Type="datetime" />
+        </EntityType>-->
+  <!--Errores durante la generación:
+advertencia 6013: La tabla o vista 'BancoDeTiempoDB.dbo.Categoria' no tiene definida una clave principal y no es posible inferir ninguna clave principal válida. Esta tabla o vista se ha excluido. Para usar la entidad, necesitará revisar el esquema, agregar las claves correctas y quitar sus comentarios.
+        <EntityType Name="Categoria">
+          <Property Name="TipoServicio" Type="varchar" MaxLength="255" />
+        </EntityType>-->
+  <!--Errores durante la generación:
+advertencia 6013: La tabla o vista 'BancoDeTiempoDB.dbo.Demanda' no tiene definida una clave principal y no es posible inferir ninguna clave principal válida. Esta tabla o vista se ha excluido. Para usar la entidad, necesitará revisar el esquema, agregar las claves correctas y quitar sus comentarios.
+        <EntityType Name="Demanda">
+          <Property Name="Horas" Type="int" />
+        </EntityType>-->
+  <!--Errores durante la generación:
+advertencia 6013: La tabla o vista 'BancoDeTiempoDB.dbo.Oferta' no tiene definida una clave principal y no es posible inferir ninguna clave principal válida. Esta tabla o vista se ha excluido. Para usar la entidad, necesitará revisar el esquema, agregar las claves correctas y quitar sus comentarios.
+        <EntityType Name="Oferta">
+          <Property Name="Horas" Type="int" />
+        </EntityType>-->
+  <!--Errores durante la generación:
+advertencia 6013: La tabla o vista 'BancoDeTiempoDB.dbo.Usuario' no tiene definida una clave principal y no es posible inferir ninguna clave principal válida. Esta tabla o vista se ha excluido. Para usar la entidad, necesitará revisar el esquema, agregar las claves correctas y quitar sus comentarios.
+        <EntityType Name="Usuario">
+          <Property Name="UsuarioID" Type="int" />
+          <Property Name="Nombre" Type="varchar" MaxLength="20" />
+          <Property Name="Apellido1" Type="varchar" MaxLength="20" />
+          <Property Name="Apellido2" Type="varchar" MaxLength="20" />
+          <Property Name="Email" Type="varchar" MaxLength="20" />
+          <Property Name="Telefono" Type="int" />
+          <Property Name="HorasAcumuladas" Type="int" />
+          <Property Name="Contraseña" Type="varchar" MaxLength="20" />
+        </EntityType>-->
+  <EntityContainer Name="BancoDeTiempoDBModelStoreContainer" />
+</Schema>

@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BancoDeTiempoDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Anuncio">
+    <Key>
+      <PropertyRef Name="idAnuncio" />
+    </Key>
+    <Property Name="idAnuncio" Type="int" Nullable="false" />
+    <Property Name="Categoria" Type="varchar" MaxLength="20" />
+    <Property Name="Descripcion" Type="varchar" MaxLength="255" />
+    <Property Name="Fecha" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Categoria">
+    <Key>
+      <PropertyRef Name="idCategoria" />
+    </Key>
+    <Property Name="idCategoria" Type="int" Nullable="false" />
+    <Property Name="TipoServicio" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="Demanda">
+    <Key>
+      <PropertyRef Name="idDemanda" />
+    </Key>
+    <Property Name="idDemanda" Type="int" Nullable="false" />
+    <Property Name="Horas" Type="int" />
+  </EntityType>
+  <EntityType Name="Oferta">
+    <Key>
+      <PropertyRef Name="idOferta" />
+    </Key>
+    <Property Name="idOferta" Type="int" Nullable="false" />
+    <Property Name="Horas" Type="int" />
+  </EntityType>
+  <EntityType Name="Usuario">
+    <Key>
+      <PropertyRef Name="UsuarioId" />
+    </Key>
+    <Property Name="UsuarioId" Type="int" Nullable="false" />
+    <Property Name="Nombre" Type="varchar" MaxLength="20" />
+    <Property Name="Apellido1" Type="varchar" MaxLength="20" />
+    <Property Name="Apellido2" Type="varchar" MaxLength="20" />
+    <Property Name="Email" Type="varchar" MaxLength="20" />
+    <Property Name="Telefono" Type="int" />
+    <Property Name="HorasAcumuladas" Type="int" />
+    <Property Name="Contraseña" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityContainer Name="BancoDeTiempoDBModelStoreContainer">
+    <EntitySet Name="Anuncio" EntityType="Self.Anuncio" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Categoria" EntityType="Self.Categoria" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Demanda" EntityType="Self.Demanda" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Oferta" EntityType="Self.Oferta" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Usuario" EntityType="Self.Usuario" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
