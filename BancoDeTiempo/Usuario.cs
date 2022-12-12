@@ -14,7 +14,7 @@ namespace BancoDeTiempo
     
     public partial class Usuario
     {
-        public int UsuarioId { get; set; }
+        public int IdUsuario { get; set; }
         public string Nombre { get; set; }
         public string Apellido1 { get; set; }
         public string Apellido2 { get; set; }
@@ -22,5 +22,7 @@ namespace BancoDeTiempo
         public Nullable<int> Telefono { get; set; }
         public Nullable<int> HorasAcumuladas { get; set; }
         public string Contraseña { get; set; }
+    
+        public virtual Anuncio Anuncio { get; set; }
     }
 }

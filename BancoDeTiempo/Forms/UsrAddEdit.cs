@@ -12,12 +12,12 @@ namespace BancoDeTiempo.Forms
 {
     public partial class UsrAddEdit : Form
     {
-        BancoDeTiempoDBEntities db;
+        BancoDeTiempoDBEntities2 db;
 
         public UsrAddEdit(Usuario obj)
         {
             InitializeComponent();
-            db = new BancoDeTiempoDBEntities();
+            db = new BancoDeTiempoDBEntities2();
 
             if (obj == null) 
             {

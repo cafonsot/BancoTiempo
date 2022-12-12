@@ -14,9 +14,14 @@ namespace BancoDeTiempo
     
     public partial class Anuncio
     {
-        public int idAnuncio { get; set; }
-        public string Categoria { get; set; }
+        public int IdAnuncio { get; set; }
+        public int Categoria { get; set; }
+        public int Usuario { get; set; }
         public string Descripcion { get; set; }
         public Nullable<System.DateTime> Fecha { get; set; }
+    
+        public virtual Demanda Demanda { get; set; }
+        public virtual Oferta Oferta { get; set; }
+        public virtual Usuario Usuario1 { get; set; }
     }
 }

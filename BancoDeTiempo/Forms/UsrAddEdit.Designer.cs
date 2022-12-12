@@ -195,7 +195,7 @@
             // 
             // textId
             // 
-            this.textId.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuarioBindingSource, "UsuarioId", true));
+            this.textId.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuarioBindingSource, "IdUsuario", true));
             this.textId.Location = new System.Drawing.Point(113, 24);
             this.textId.Name = "textId";
             this.textId.Size = new System.Drawing.Size(235, 20);
@@ -248,22 +248,22 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textNombre;
-        private System.Windows.Forms.TextBox textApellido1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textApellido2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textEmail;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textTelefono;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textHorasAcumuladas;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textContraseña;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.BindingSource usuarioBindingSource;
-        private System.Windows.Forms.TextBox textId;
         private System.Windows.Forms.Label label8;
+        public System.Windows.Forms.TextBox textNombre;
+        public System.Windows.Forms.TextBox textApellido1;
+        public System.Windows.Forms.TextBox textApellido2;
+        public System.Windows.Forms.TextBox textEmail;
+        public System.Windows.Forms.TextBox textTelefono;
+        public System.Windows.Forms.TextBox textHorasAcumuladas;
+        public System.Windows.Forms.TextBox textContraseña;
+        public System.Windows.Forms.TextBox textId;
     }
 }

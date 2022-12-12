@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<datosXML>
+  <Usuarios>
+    <Usuario ID="1">
+      <Nombre>Alex</Nombre>
+      <Apellido1>Pinzano</Apellido1>
+      <Apellido2>de la Torre</Apellido2>
+      <Email>alex@uoc.edu</Email>
+      <Telefono>673647213</Telefono>
+      <HorasAcumuladas>20</HorasAcumuladas>
+      <Contraseña>1234</Contraseña>
+    </Usuario>
+    <Usuario ID="2">
+      <Nombre>Joanic</Nombre>
+      <Apellido1>Arjona</Apellido1>
+      <Apellido2>Stark</Apellido2>
+      <Email>joan@uoc.edu</Email>
+      <Telefono>65341294</Telefono>
+      <HorasAcumuladas>39</HorasAcumuladas>
+      <Contraseña>1234</Contraseña>
+    </Usuario>
+    <Usuario ID="3">
+      <Nombre>Albert</Nombre>
+      <Apellido1>Grauil</Apellido1>
+      <Apellido2>Carreras</Apellido2>
+      <Email>albert@uoc.edu</Email>
+      <Telefono>684923532</Telefono>
+      <HorasAcumuladas>20</HorasAcumuladas>
+      <Contraseña>1234</Contraseña>
+    </Usuario>
+  </Usuarios>
+</datosXML>

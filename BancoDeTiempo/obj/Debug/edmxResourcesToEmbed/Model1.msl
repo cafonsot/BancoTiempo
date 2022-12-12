@@ -1,11 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="BancoDeTiempoDBModelStoreContainer" CdmEntityContainer="BancoDeTiempoDBEntities">
+  <EntityContainerMapping StorageEntityContainer="BancoDeTiempoDBModelStoreContainer" CdmEntityContainer="BancoDeTiempoDBEntities2">
     <EntitySetMapping Name="Anuncio">
       <EntityTypeMapping TypeName="BancoDeTiempoDBModel.Anuncio">
         <MappingFragment StoreEntitySet="Anuncio">
-          <ScalarProperty Name="idAnuncio" ColumnName="idAnuncio" />
+          <ScalarProperty Name="IdAnuncio" ColumnName="IdAnuncio" />
           <ScalarProperty Name="Categoria" ColumnName="Categoria" />
+          <ScalarProperty Name="Usuario" ColumnName="Usuario" />
           <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
           <ScalarProperty Name="Fecha" ColumnName="Fecha" />
         </MappingFragment>
@@ -14,7 +15,7 @@
     <EntitySetMapping Name="Categoria">
       <EntityTypeMapping TypeName="BancoDeTiempoDBModel.Categoria">
         <MappingFragment StoreEntitySet="Categoria">
-          <ScalarProperty Name="idCategoria" ColumnName="idCategoria" />
+          <ScalarProperty Name="IdCategoria" ColumnName="IdCategoria" />
           <ScalarProperty Name="TipoServicio" ColumnName="TipoServicio" />
         </MappingFragment>
       </EntityTypeMapping>
@@ -22,7 +23,7 @@
     <EntitySetMapping Name="Demanda">
       <EntityTypeMapping TypeName="BancoDeTiempoDBModel.Demanda">
         <MappingFragment StoreEntitySet="Demanda">
-          <ScalarProperty Name="idDemanda" ColumnName="idDemanda" />
+          <ScalarProperty Name="IdDemanda" ColumnName="IdDemanda" />
           <ScalarProperty Name="Horas" ColumnName="Horas" />
         </MappingFragment>
       </EntityTypeMapping>
@@ -30,22 +31,33 @@
     <EntitySetMapping Name="Oferta">
       <EntityTypeMapping TypeName="BancoDeTiempoDBModel.Oferta">
         <MappingFragment StoreEntitySet="Oferta">
-          <ScalarProperty Name="idOferta" ColumnName="idOferta" />
+          <ScalarProperty Name="IdOferta" ColumnName="IdOferta" />
           <ScalarProperty Name="Horas" ColumnName="Horas" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Mensaje">
+      <EntityTypeMapping TypeName="BancoDeTiempoDBModel.Mensaje">
+        <MappingFragment StoreEntitySet="Mensaje">
+          <ScalarProperty Name="UsuarioRec" ColumnName="UsuarioRec" />
+          <ScalarProperty Name="UsuarioEnv" ColumnName="UsuarioEnv" />
+          <ScalarProperty Name="Texto" ColumnName="Texto" />
+          <ScalarProperty Name="Anuncio" ColumnName="Anuncio" />
+          <ScalarProperty Name="IdMensaje" ColumnName="IdMensaje" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Usuario">
       <EntityTypeMapping TypeName="BancoDeTiempoDBModel.Usuario">
         <MappingFragment StoreEntitySet="Usuario">
-          <ScalarProperty Name="UsuarioId" ColumnName="UsuarioId" />
-          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
-          <ScalarProperty Name="Apellido1" ColumnName="Apellido1" />
-          <ScalarProperty Name="Apellido2" ColumnName="Apellido2" />
-          <ScalarProperty Name="Email" ColumnName="Email" />
-          <ScalarProperty Name="Telefono" ColumnName="Telefono" />
-          <ScalarProperty Name="HorasAcumuladas" ColumnName="HorasAcumuladas" />
           <ScalarProperty Name="Contraseña" ColumnName="Contraseña" />
+          <ScalarProperty Name="HorasAcumuladas" ColumnName="HorasAcumuladas" />
+          <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Apellido2" ColumnName="Apellido2" />
+          <ScalarProperty Name="Apellido1" ColumnName="Apellido1" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

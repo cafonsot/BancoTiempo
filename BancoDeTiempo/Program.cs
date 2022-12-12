@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BancoDeTiempo.Forms;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -11,12 +12,17 @@ namespace BancoDeTiempo
         /// <summary>
         /// Punto de entrada principal para la aplicación.
         /// </summary>
+        /// 
+
+        public static Login login;
+        public static BancoDeTiempoDBEntities2 db = new BancoDeTiempoDBEntities2();
+
         [STAThread]
         static void Main()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(login = new Login());
         }
     }
 }

@@ -14,7 +14,9 @@ namespace BancoDeTiempo
     
     public partial class Oferta
     {
-        public int idOferta { get; set; }
+        public int IdOferta { get; set; }
         public Nullable<int> Horas { get; set; }
+    
+        public virtual Anuncio Anuncio { get; set; }
     }
 }

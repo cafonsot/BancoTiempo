@@ -14,7 +14,9 @@ namespace BancoDeTiempo
     
     public partial class Categoria
     {
-        public int idCategoria { get; set; }
+        public int IdCategoria { get; set; }
         public string TipoServicio { get; set; }
+    
+        public virtual Anuncio Anuncio { get; set; }
     }
 }

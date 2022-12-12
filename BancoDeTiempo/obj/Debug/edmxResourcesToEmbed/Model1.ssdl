@@ -2,39 +2,52 @@
 <Schema Namespace="BancoDeTiempoDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
   <EntityType Name="Anuncio">
     <Key>
-      <PropertyRef Name="idAnuncio" />
+      <PropertyRef Name="IdAnuncio" />
     </Key>
-    <Property Name="idAnuncio" Type="int" Nullable="false" />
-    <Property Name="Categoria" Type="varchar" MaxLength="20" />
+    <Property Name="IdAnuncio" Type="int" Nullable="false" />
+    <Property Name="Categoria" Type="int" Nullable="false" />
+    <Property Name="Usuario" Type="int" Nullable="false" />
     <Property Name="Descripcion" Type="varchar" MaxLength="255" />
     <Property Name="Fecha" Type="datetime" />
   </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'BancoDeTiempoDB.dbo.Categoria' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
   <EntityType Name="Categoria">
     <Key>
-      <PropertyRef Name="idCategoria" />
+      <PropertyRef Name="IdCategoria" />
     </Key>
-    <Property Name="idCategoria" Type="int" Nullable="false" />
+    <Property Name="IdCategoria" Type="int" Nullable="false" />
     <Property Name="TipoServicio" Type="varchar" MaxLength="255" />
   </EntityType>
   <EntityType Name="Demanda">
     <Key>
-      <PropertyRef Name="idDemanda" />
+      <PropertyRef Name="IdDemanda" />
     </Key>
-    <Property Name="idDemanda" Type="int" Nullable="false" />
+    <Property Name="IdDemanda" Type="int" Nullable="false" />
     <Property Name="Horas" Type="int" />
+  </EntityType>
+  <EntityType Name="Mensaje">
+    <Key>
+      <PropertyRef Name="IdMensaje" />
+    </Key>
+    <Property Name="IdMensaje" Type="int" Nullable="false" />
+    <Property Name="UsuarioEnv" Type="int" Nullable="false" />
+    <Property Name="UsuarioRec" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Anuncio" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="Texto" Type="varchar" MaxLength="50" />
   </EntityType>
   <EntityType Name="Oferta">
     <Key>
-      <PropertyRef Name="idOferta" />
+      <PropertyRef Name="IdOferta" />
     </Key>
-    <Property Name="idOferta" Type="int" Nullable="false" />
+    <Property Name="IdOferta" Type="int" Nullable="false" />
     <Property Name="Horas" Type="int" />
   </EntityType>
   <EntityType Name="Usuario">
     <Key>
-      <PropertyRef Name="UsuarioId" />
+      <PropertyRef Name="IdUsuario" />
     </Key>
-    <Property Name="UsuarioId" Type="int" Nullable="false" />
+    <Property Name="IdUsuario" Type="int" Nullable="false" />
     <Property Name="Nombre" Type="varchar" MaxLength="20" />
     <Property Name="Apellido1" Type="varchar" MaxLength="20" />
     <Property Name="Apellido2" Type="varchar" MaxLength="20" />
@@ -43,11 +56,81 @@
     <Property Name="HorasAcumuladas" Type="int" />
     <Property Name="Contraseña" Type="varchar" MaxLength="20" />
   </EntityType>
+  <Association Name="FK__Categoria__IdCat__4BAC3F29">
+    <End Role="Anuncio" Type="Self.Anuncio" Multiplicity="1" />
+    <End Role="Categoria" Type="Self.Categoria" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Anuncio">
+        <PropertyRef Name="IdAnuncio" />
+      </Principal>
+      <Dependent Role="Categoria">
+        <PropertyRef Name="IdCategoria" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Demanda__IdDeman__4CA06362">
+    <End Role="Anuncio" Type="Self.Anuncio" Multiplicity="1" />
+    <End Role="Demanda" Type="Self.Demanda" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Anuncio">
+        <PropertyRef Name="IdAnuncio" />
+      </Principal>
+      <Dependent Role="Demanda">
+        <PropertyRef Name="IdDemanda" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Oferta__IdOferta__4D94879B">
+    <End Role="Anuncio" Type="Self.Anuncio" Multiplicity="1" />
+    <End Role="Oferta" Type="Self.Oferta" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Anuncio">
+        <PropertyRef Name="IdAnuncio" />
+      </Principal>
+      <Dependent Role="Oferta">
+        <PropertyRef Name="IdOferta" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Usuario__IdUsuar__6D0D32F4">
+    <End Role="Anuncio" Type="Self.Anuncio" Multiplicity="1" />
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Anuncio">
+        <PropertyRef Name="IdAnuncio" />
+      </Principal>
+      <Dependent Role="Usuario">
+        <PropertyRef Name="IdUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <EntityContainer Name="BancoDeTiempoDBModelStoreContainer">
     <EntitySet Name="Anuncio" EntityType="Self.Anuncio" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="Categoria" EntityType="Self.Categoria" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Demanda" EntityType="Self.Demanda" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Mensaje" EntityType="Self.Mensaje" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Oferta" EntityType="Self.Oferta" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Usuario" EntityType="Self.Usuario" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Categoria" EntityType="Self.Categoria" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Categoria].[IdCategoria] AS [IdCategoria], 
+    [Categoria].[TipoServicio] AS [TipoServicio]
+    FROM [dbo].[Categoria] AS [Categoria]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK__Categoria__IdCat__4BAC3F29" Association="Self.FK__Categoria__IdCat__4BAC3F29">
+      <End Role="Anuncio" EntitySet="Anuncio" />
+      <End Role="Categoria" EntitySet="Categoria" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Demanda__IdDeman__4CA06362" Association="Self.FK__Demanda__IdDeman__4CA06362">
+      <End Role="Anuncio" EntitySet="Anuncio" />
+      <End Role="Demanda" EntitySet="Demanda" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Oferta__IdOferta__4D94879B" Association="Self.FK__Oferta__IdOferta__4D94879B">
+      <End Role="Anuncio" EntitySet="Anuncio" />
+      <End Role="Oferta" EntitySet="Oferta" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Usuario__IdUsuar__6D0D32F4" Association="Self.FK__Usuario__IdUsuar__6D0D32F4">
+      <End Role="Anuncio" EntitySet="Anuncio" />
+      <End Role="Usuario" EntitySet="Usuario" />
+    </AssociationSet>
   </EntityContainer>
 </Schema>

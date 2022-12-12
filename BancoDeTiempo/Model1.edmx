@@ -4,42 +4,55 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="BancoDeTiempoDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="BancoDeTiempoDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Anuncio">
           <Key>
-            <PropertyRef Name="idAnuncio" />
+            <PropertyRef Name="IdAnuncio" />
           </Key>
-          <Property Name="idAnuncio" Type="int" Nullable="false" />
-          <Property Name="Categoria" Type="varchar" MaxLength="20" />
+          <Property Name="IdAnuncio" Type="int" Nullable="false" />
+          <Property Name="Categoria" Type="int" Nullable="false" />
+          <Property Name="Usuario" Type="int" Nullable="false" />
           <Property Name="Descripcion" Type="varchar" MaxLength="255" />
           <Property Name="Fecha" Type="datetime" />
         </EntityType>
+        <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'BancoDeTiempoDB.dbo.Categoria' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
         <EntityType Name="Categoria">
           <Key>
-            <PropertyRef Name="idCategoria" />
+            <PropertyRef Name="IdCategoria" />
           </Key>
-          <Property Name="idCategoria" Type="int" Nullable="false" />
+          <Property Name="IdCategoria" Type="int" Nullable="false" />
           <Property Name="TipoServicio" Type="varchar" MaxLength="255" />
         </EntityType>
         <EntityType Name="Demanda">
           <Key>
-            <PropertyRef Name="idDemanda" />
+            <PropertyRef Name="IdDemanda" />
           </Key>
-          <Property Name="idDemanda" Type="int" Nullable="false" />
+          <Property Name="IdDemanda" Type="int" Nullable="false" />
           <Property Name="Horas" Type="int" />
+        </EntityType>
+        <EntityType Name="Mensaje">
+          <Key>
+            <PropertyRef Name="IdMensaje" />
+          </Key>
+          <Property Name="IdMensaje" Type="int" Nullable="false" />
+          <Property Name="UsuarioEnv" Type="int" Nullable="false" />
+          <Property Name="UsuarioRec" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="Anuncio" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="Texto" Type="varchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="Oferta">
           <Key>
-            <PropertyRef Name="idOferta" />
+            <PropertyRef Name="IdOferta" />
           </Key>
-          <Property Name="idOferta" Type="int" Nullable="false" />
+          <Property Name="IdOferta" Type="int" Nullable="false" />
           <Property Name="Horas" Type="int" />
         </EntityType>
         <EntityType Name="Usuario">
           <Key>
-            <PropertyRef Name="UsuarioId" />
+            <PropertyRef Name="IdUsuario" />
           </Key>
-          <Property Name="UsuarioId" Type="int" Nullable="false" />
+          <Property Name="IdUsuario" Type="int" Nullable="false" />
           <Property Name="Nombre" Type="varchar" MaxLength="20" />
           <Property Name="Apellido1" Type="varchar" MaxLength="20" />
           <Property Name="Apellido2" Type="varchar" MaxLength="20" />
@@ -48,53 +61,199 @@
           <Property Name="HorasAcumuladas" Type="int" />
           <Property Name="Contraseña" Type="varchar" MaxLength="20" />
         </EntityType>
+        <Association Name="FK__Categoria__IdCat__4BAC3F29">
+          <End Role="Anuncio" Type="Self.Anuncio" Multiplicity="1" />
+          <End Role="Categoria" Type="Self.Categoria" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Anuncio">
+              <PropertyRef Name="IdAnuncio" />
+            </Principal>
+            <Dependent Role="Categoria">
+              <PropertyRef Name="IdCategoria" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Demanda__IdDeman__4CA06362">
+          <End Role="Anuncio" Type="Self.Anuncio" Multiplicity="1" />
+          <End Role="Demanda" Type="Self.Demanda" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Anuncio">
+              <PropertyRef Name="IdAnuncio" />
+            </Principal>
+            <Dependent Role="Demanda">
+              <PropertyRef Name="IdDemanda" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Oferta__IdOferta__4D94879B">
+          <End Role="Anuncio" Type="Self.Anuncio" Multiplicity="1" />
+          <End Role="Oferta" Type="Self.Oferta" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Anuncio">
+              <PropertyRef Name="IdAnuncio" />
+            </Principal>
+            <Dependent Role="Oferta">
+              <PropertyRef Name="IdOferta" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Usuario__IdUsuar__6D0D32F4">
+          <End Role="Anuncio" Type="Self.Anuncio" Multiplicity="1" />
+          <End Role="Usuario" Type="Self.Usuario" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Anuncio">
+              <PropertyRef Name="IdAnuncio" />
+            </Principal>
+            <Dependent Role="Usuario">
+              <PropertyRef Name="IdUsuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <EntityContainer Name="BancoDeTiempoDBModelStoreContainer">
           <EntitySet Name="Anuncio" EntityType="Self.Anuncio" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Categoria" EntityType="Self.Categoria" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Demanda" EntityType="Self.Demanda" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Mensaje" EntityType="Self.Mensaje" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Oferta" EntityType="Self.Oferta" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Usuario" EntityType="Self.Usuario" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Categoria" EntityType="Self.Categoria" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Categoria].[IdCategoria] AS [IdCategoria], 
+    [Categoria].[TipoServicio] AS [TipoServicio]
+    FROM [dbo].[Categoria] AS [Categoria]</DefiningQuery>
+          </EntitySet>
+          <AssociationSet Name="FK__Categoria__IdCat__4BAC3F29" Association="Self.FK__Categoria__IdCat__4BAC3F29">
+            <End Role="Anuncio" EntitySet="Anuncio" />
+            <End Role="Categoria" EntitySet="Categoria" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Demanda__IdDeman__4CA06362" Association="Self.FK__Demanda__IdDeman__4CA06362">
+            <End Role="Anuncio" EntitySet="Anuncio" />
+            <End Role="Demanda" EntitySet="Demanda" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Oferta__IdOferta__4D94879B" Association="Self.FK__Oferta__IdOferta__4D94879B">
+            <End Role="Anuncio" EntitySet="Anuncio" />
+            <End Role="Oferta" EntitySet="Oferta" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Usuario__IdUsuar__6D0D32F4" Association="Self.FK__Usuario__IdUsuar__6D0D32F4">
+            <End Role="Anuncio" EntitySet="Anuncio" />
+            <End Role="Usuario" EntitySet="Usuario" />
+          </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="BancoDeTiempoDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityType Name="Anuncio">
           <Key>
-            <PropertyRef Name="idAnuncio" />
+            <PropertyRef Name="IdAnuncio" />
           </Key>
-          <Property Name="idAnuncio" Type="Int32" Nullable="false" />
-          <Property Name="Categoria" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="IdAnuncio" Type="Int32" Nullable="false" />
+          <Property Name="Categoria" Type="Int32" Nullable="false" />
+          <Property Name="Usuario" Type="Int32" Nullable="false" />
           <Property Name="Descripcion" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
           <Property Name="Fecha" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="Demanda" Relationship="Self.FK__Demanda__IdDeman__4CA06362" FromRole="Anuncio" ToRole="Demanda" />
+          <NavigationProperty Name="Oferta" Relationship="Self.FK__Oferta__IdOferta__4D94879B" FromRole="Anuncio" ToRole="Oferta" />
+          <NavigationProperty Name="Usuario1" Relationship="BancoDeTiempoDBModel.FK__Usuario__IdUsuar__6D0D32F4" FromRole="Anuncio" ToRole="Usuario" />
         </EntityType>
         <EntityType Name="Categoria">
           <Key>
-            <PropertyRef Name="idCategoria" />
+            <PropertyRef Name="IdCategoria" />
           </Key>
-          <Property Name="idCategoria" Type="Int32" Nullable="false" />
+          <Property Name="IdCategoria" Type="Int32" Nullable="false" />
           <Property Name="TipoServicio" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Anuncio" Relationship="Self.FK__Categoria__IdCat__4BAC3F29" FromRole="Categoria" ToRole="Anuncio" />
         </EntityType>
         <EntityType Name="Demanda">
           <Key>
-            <PropertyRef Name="idDemanda" />
+            <PropertyRef Name="IdDemanda" />
           </Key>
-          <Property Name="idDemanda" Type="Int32" Nullable="false" />
+          <Property Name="IdDemanda" Type="Int32" Nullable="false" />
           <Property Name="Horas" Type="Int32" />
+          <NavigationProperty Name="Anuncio" Relationship="Self.FK__Demanda__IdDeman__4CA06362" FromRole="Demanda" ToRole="Anuncio" />
         </EntityType>
         <EntityType Name="Oferta">
           <Key>
-            <PropertyRef Name="idOferta" />
+            <PropertyRef Name="IdOferta" />
           </Key>
-          <Property Name="idOferta" Type="Int32" Nullable="false" />
+          <Property Name="IdOferta" Type="Int32" Nullable="false" />
           <Property Name="Horas" Type="Int32" />
+          <NavigationProperty Name="Anuncio" Relationship="Self.FK__Oferta__IdOferta__4D94879B" FromRole="Oferta" ToRole="Anuncio" />
+        </EntityType>
+        <Association Name="FK__Categoria__IdCat__4BAC3F29">
+          <End Role="Anuncio" Type="Self.Anuncio" Multiplicity="1" />
+          <End Role="Categoria" Type="Self.Categoria" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Anuncio">
+              <PropertyRef Name="IdAnuncio" />
+            </Principal>
+            <Dependent Role="Categoria">
+              <PropertyRef Name="IdCategoria" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Demanda__IdDeman__4CA06362">
+          <End Role="Anuncio" Type="Self.Anuncio" Multiplicity="1" />
+          <End Role="Demanda" Type="Self.Demanda" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Anuncio">
+              <PropertyRef Name="IdAnuncio" />
+            </Principal>
+            <Dependent Role="Demanda">
+              <PropertyRef Name="IdDemanda" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Oferta__IdOferta__4D94879B">
+          <End Role="Anuncio" Type="Self.Anuncio" Multiplicity="1" />
+          <End Role="Oferta" Type="Self.Oferta" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Anuncio">
+              <PropertyRef Name="IdAnuncio" />
+            </Principal>
+            <Dependent Role="Oferta">
+              <PropertyRef Name="IdOferta" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="BancoDeTiempoDBEntities2" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Anuncio" EntityType="Self.Anuncio" />
+          <EntitySet Name="Categoria" EntityType="Self.Categoria" />
+          <EntitySet Name="Demanda" EntityType="Self.Demanda" />
+          <EntitySet Name="Oferta" EntityType="Self.Oferta" />
+          <AssociationSet Name="FK__Categoria__IdCat__4BAC3F29" Association="Self.FK__Categoria__IdCat__4BAC3F29">
+            <End Role="Anuncio" EntitySet="Anuncio" />
+            <End Role="Categoria" EntitySet="Categoria" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Demanda__IdDeman__4CA06362" Association="Self.FK__Demanda__IdDeman__4CA06362">
+            <End Role="Anuncio" EntitySet="Anuncio" />
+            <End Role="Demanda" EntitySet="Demanda" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Oferta__IdOferta__4D94879B" Association="Self.FK__Oferta__IdOferta__4D94879B">
+            <End Role="Anuncio" EntitySet="Anuncio" />
+            <End Role="Oferta" EntitySet="Oferta" />
+          </AssociationSet>
+          <EntitySet Name="Mensaje" EntityType="BancoDeTiempoDBModel.Mensaje" />
+          <EntitySet Name="Usuario" EntityType="BancoDeTiempoDBModel.Usuario" />
+          <AssociationSet Name="FK__Usuario__IdUsuar__6D0D32F4" Association="BancoDeTiempoDBModel.FK__Usuario__IdUsuar__6D0D32F4">
+            <End Role="Anuncio" EntitySet="Anuncio" />
+            <End Role="Usuario" EntitySet="Usuario" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Mensaje">
+          <Key>
+            <PropertyRef Name="IdMensaje" />
+          </Key>
+          <Property Name="IdMensaje" Type="Int32" Nullable="false" />
+          <Property Name="Anuncio" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Texto" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="UsuarioEnv" Type="Int32" Nullable="false" />
+          <Property Name="UsuarioRec" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="Usuario">
           <Key>
-            <PropertyRef Name="UsuarioId" />
+            <PropertyRef Name="IdUsuario" />
           </Key>
-          <Property Name="UsuarioId" Type="Int32" Nullable="false" />
+          <Property Name="IdUsuario" Type="Int32" Nullable="false" />
           <Property Name="Nombre" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
           <Property Name="Apellido1" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
           <Property Name="Apellido2" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
@@ -102,25 +261,32 @@
           <Property Name="Telefono" Type="Int32" />
           <Property Name="HorasAcumuladas" Type="Int32" />
           <Property Name="Contraseña" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Anuncio" Relationship="BancoDeTiempoDBModel.FK__Usuario__IdUsuar__6D0D32F4" FromRole="Usuario" ToRole="Anuncio" />
         </EntityType>
-        <EntityContainer Name="BancoDeTiempoDBEntities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="Anuncio" EntityType="Self.Anuncio" />
-          <EntitySet Name="Categoria" EntityType="Self.Categoria" />
-          <EntitySet Name="Demanda" EntityType="Self.Demanda" />
-          <EntitySet Name="Oferta" EntityType="Self.Oferta" />
-          <EntitySet Name="Usuario" EntityType="Self.Usuario" />
-        </EntityContainer>
+        <Association Name="FK__Usuario__IdUsuar__6D0D32F4">
+          <End Type="BancoDeTiempoDBModel.Anuncio" Role="Anuncio" Multiplicity="1" />
+          <End Type="BancoDeTiempoDBModel.Usuario" Role="Usuario" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Anuncio">
+              <PropertyRef Name="IdAnuncio" />
+            </Principal>
+            <Dependent Role="Usuario">
+              <PropertyRef Name="IdUsuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="BancoDeTiempoDBModelStoreContainer" CdmEntityContainer="BancoDeTiempoDBEntities">
+        <EntityContainerMapping StorageEntityContainer="BancoDeTiempoDBModelStoreContainer" CdmEntityContainer="BancoDeTiempoDBEntities2">
           <EntitySetMapping Name="Anuncio">
             <EntityTypeMapping TypeName="BancoDeTiempoDBModel.Anuncio">
               <MappingFragment StoreEntitySet="Anuncio">
-                <ScalarProperty Name="idAnuncio" ColumnName="idAnuncio" />
+                <ScalarProperty Name="IdAnuncio" ColumnName="IdAnuncio" />
                 <ScalarProperty Name="Categoria" ColumnName="Categoria" />
+                <ScalarProperty Name="Usuario" ColumnName="Usuario" />
                 <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
                 <ScalarProperty Name="Fecha" ColumnName="Fecha" />
               </MappingFragment>
@@ -129,7 +295,7 @@
           <EntitySetMapping Name="Categoria">
             <EntityTypeMapping TypeName="BancoDeTiempoDBModel.Categoria">
               <MappingFragment StoreEntitySet="Categoria">
-                <ScalarProperty Name="idCategoria" ColumnName="idCategoria" />
+                <ScalarProperty Name="IdCategoria" ColumnName="IdCategoria" />
                 <ScalarProperty Name="TipoServicio" ColumnName="TipoServicio" />
               </MappingFragment>
             </EntityTypeMapping>
@@ -137,7 +303,7 @@
           <EntitySetMapping Name="Demanda">
             <EntityTypeMapping TypeName="BancoDeTiempoDBModel.Demanda">
               <MappingFragment StoreEntitySet="Demanda">
-                <ScalarProperty Name="idDemanda" ColumnName="idDemanda" />
+                <ScalarProperty Name="IdDemanda" ColumnName="IdDemanda" />
                 <ScalarProperty Name="Horas" ColumnName="Horas" />
               </MappingFragment>
             </EntityTypeMapping>
@@ -145,22 +311,33 @@
           <EntitySetMapping Name="Oferta">
             <EntityTypeMapping TypeName="BancoDeTiempoDBModel.Oferta">
               <MappingFragment StoreEntitySet="Oferta">
-                <ScalarProperty Name="idOferta" ColumnName="idOferta" />
+                <ScalarProperty Name="IdOferta" ColumnName="IdOferta" />
                 <ScalarProperty Name="Horas" ColumnName="Horas" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Mensaje">
+            <EntityTypeMapping TypeName="BancoDeTiempoDBModel.Mensaje">
+              <MappingFragment StoreEntitySet="Mensaje">
+                <ScalarProperty Name="UsuarioRec" ColumnName="UsuarioRec" />
+                <ScalarProperty Name="UsuarioEnv" ColumnName="UsuarioEnv" />
+                <ScalarProperty Name="Texto" ColumnName="Texto" />
+                <ScalarProperty Name="Anuncio" ColumnName="Anuncio" />
+                <ScalarProperty Name="IdMensaje" ColumnName="IdMensaje" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Usuario">
             <EntityTypeMapping TypeName="BancoDeTiempoDBModel.Usuario">
               <MappingFragment StoreEntitySet="Usuario">
-                <ScalarProperty Name="UsuarioId" ColumnName="UsuarioId" />
-                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
-                <ScalarProperty Name="Apellido1" ColumnName="Apellido1" />
-                <ScalarProperty Name="Apellido2" ColumnName="Apellido2" />
-                <ScalarProperty Name="Email" ColumnName="Email" />
-                <ScalarProperty Name="Telefono" ColumnName="Telefono" />
-                <ScalarProperty Name="HorasAcumuladas" ColumnName="HorasAcumuladas" />
                 <ScalarProperty Name="Contraseña" ColumnName="Contraseña" />
+                <ScalarProperty Name="HorasAcumuladas" ColumnName="HorasAcumuladas" />
+                <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Apellido2" ColumnName="Apellido2" />
+                <ScalarProperty Name="Apellido1" ColumnName="Apellido1" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -179,7 +356,7 @@
       <DesignerInfoPropertySet>
         <DesignerProperty Name="ValidateOnBuild" Value="true" />
         <DesignerProperty Name="EnablePluralization" Value="false" />
-        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="False" />
         <DesignerProperty Name="UseLegacyProvider" Value="false" />
         <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
       </DesignerInfoPropertySet>

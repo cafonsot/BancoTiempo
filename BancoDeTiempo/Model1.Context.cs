@@ -13,10 +13,10 @@ namespace BancoDeTiempo
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class BancoDeTiempoDBEntities : DbContext
+    public partial class BancoDeTiempoDBEntities2 : DbContext
     {
-        public BancoDeTiempoDBEntities()
-            : base("name=BancoDeTiempoDBEntities")
+        public BancoDeTiempoDBEntities2()
+            : base("name=BancoDeTiempoDBEntities2")
         {
         }
     
@@ -29,6 +29,7 @@ namespace BancoDeTiempo
         public virtual DbSet<Categoria> Categoria { get; set; }
         public virtual DbSet<Demanda> Demanda { get; set; }
         public virtual DbSet<Oferta> Oferta { get; set; }
+        public virtual DbSet<Mensaje> Mensaje { get; set; }
         public virtual DbSet<Usuario> Usuario { get; set; }
     }
 }

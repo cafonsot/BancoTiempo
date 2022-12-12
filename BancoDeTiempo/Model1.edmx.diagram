@@ -4,12 +4,17 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="99434565bf1c4c53b9b374e2e870347b" Name="Diagram1" ZoomLevel="126">
-        <EntityTypeShape EntityType="BancoDeTiempoDBModel.Anuncio" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="BancoDeTiempoDBModel.Categoria" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="BancoDeTiempoDBModel.Demanda" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="BancoDeTiempoDBModel.Oferta" Width="1.5" PointX="2.75" PointY="3.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="BancoDeTiempoDBModel.Usuario" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+      <Diagram DiagramId="b6beaf3e5fb6492ca88ff5c8e771433e" Name="Diagram1">
+        <EntityTypeShape EntityType="BancoDeTiempoDBModel.Anuncio" Width="1.5" PointX="0.75" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="BancoDeTiempoDBModel.Categoria" Width="1.5" PointX="3" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="BancoDeTiempoDBModel.Demanda" Width="1.5" PointX="3" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BancoDeTiempoDBModel.Oferta" Width="1.5" PointX="3" PointY="6" IsExpanded="true" />
+        <AssociationConnector Association="BancoDeTiempoDBModel.FK__Categoria__IdCat__4BAC3F29" ManuallyRouted="false" />
+        <AssociationConnector Association="BancoDeTiempoDBModel.FK__Demanda__IdDeman__4CA06362" ManuallyRouted="false" />
+        <AssociationConnector Association="BancoDeTiempoDBModel.FK__Oferta__IdOferta__4D94879B" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="BancoDeTiempoDBModel.Mensaje" Width="1.5" PointX="5.625" PointY="4.75" />
+        <EntityTypeShape EntityType="BancoDeTiempoDBModel.Usuario" Width="1.5" PointX="3" PointY="8.75" />
+        <AssociationConnector Association="BancoDeTiempoDBModel.FK__Usuario__IdUsuar__6D0D32F4" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

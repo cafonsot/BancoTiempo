@@ -32,3 +32,122 @@ F:\BancoTiempo\BancoDeTiempo\obj\Debug\BancoDeTiempo.exe
 F:\BancoTiempo\BancoDeTiempo\obj\Debug\BancoDeTiempo.pdb
 F:\BancoTiempo\BancoDeTiempo\obj\Debug\BancoDeTiempo.Forms.AnuAddEdit.resources
 F:\BancoTiempo\BancoDeTiempo\obj\Debug\BancoDeTiempo.Forms.UsrAddEdit.resources
+C:\Users\alexp\OneDrive\Escritorio\BancoTiempo-main\BancoTiempo-main\BancoDeTiempo\obj\Debug\BancoDeTiempo.csproj.AssemblyReference.cache
+C:\Users\alexp\OneDrive\Escritorio\BancoTiempo-main\BancoTiempo-main\BancoDeTiempo\obj\Debug\BancoDeTiempo.csproj.SuggestedBindingRedirects.cache
+C:\Users\alexp\OneDrive\Escritorio\BancoTiempo-main\BancoTiempo-main\BancoDeTiempo\obj\Debug\BancoDeTiempo.Form1.resources
+C:\Users\alexp\OneDrive\Escritorio\BancoTiempo-main\BancoTiempo-main\BancoDeTiempo\obj\Debug\BancoDeTiempo.Forms.AnuAddEdit.resources
+C:\Users\alexp\OneDrive\Escritorio\BancoTiempo-main\BancoTiempo-main\BancoDeTiempo\obj\Debug\BancoDeTiempo.Forms.UsrAddEdit.resources
+C:\Users\alexp\OneDrive\Escritorio\BancoTiempo-main\BancoTiempo-main\BancoDeTiempo\obj\Debug\BancoDeTiempo.Properties.Resources.resources
+C:\Users\alexp\OneDrive\Escritorio\BancoTiempo-main\BancoTiempo-main\BancoDeTiempo\obj\Debug\BancoDeTiempo.csproj.GenerateResource.cache
+C:\Users\alexp\OneDrive\Escritorio\BancoTiempo-main\BancoTiempo-main\BancoDeTiempo\obj\Debug\BancoDeTiempo.csproj.CoreCompileInputs.cache
+C:\Users\alexp\OneDrive\Escritorio\BancoTiempo-main\BancoTiempo-main\BancoDeTiempo\obj\Debug\BancoDeTiempo.exe
+C:\Users\alexp\OneDrive\Escritorio\BancoTiempo-main\BancoTiempo-main\BancoDeTiempo\obj\Debug\BancoDeTiempo.pdb
+C:\Users\alexp\OneDrive\Escritorio\BancoTiempo-main\BancoTiempo-main\BancoDeTiempo\bin\Debug\BancoDeTiempo.exe.config
+C:\Users\alexp\OneDrive\Escritorio\BancoTiempo-main\BancoTiempo-main\BancoDeTiempo\bin\Debug\BancoDeTiempo.exe
+C:\Users\alexp\OneDrive\Escritorio\BancoTiempo-main\BancoTiempo-main\BancoDeTiempo\bin\Debug\BancoDeTiempo.pdb
+C:\Users\alexp\OneDrive\Escritorio\BancoTiempo-main\BancoTiempo-main\BancoDeTiempo\bin\Debug\EntityFramework.dll
+C:\Users\alexp\OneDrive\Escritorio\BancoTiempo-main\BancoTiempo-main\BancoDeTiempo\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\alexp\OneDrive\Escritorio\BancoTiempo-main\BancoTiempo-main\BancoDeTiempo\bin\Debug\EntityFramework.xml
+C:\Users\alexp\OneDrive\Escritorio\BancoTiempo-main\BancoTiempo-main\BancoDeTiempo\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\alexp\OneDrive\Escritorio\BancoTiempo-main\BancoTiempo-main\BancoDeTiempo\obj\Debug\BancoDeTiempo.csproj.CopyComplete
+F:\Escritorio\BancoDeTiempo\bin\Debug\BancoDeTiempo.exe.config
+F:\Escritorio\BancoDeTiempo\bin\Debug\BancoDeTiempo.exe
+F:\Escritorio\BancoDeTiempo\bin\Debug\BancoDeTiempo.pdb
+F:\Escritorio\BancoDeTiempo\bin\Debug\EntityFramework.dll
+F:\Escritorio\BancoDeTiempo\bin\Debug\EntityFramework.SqlServer.dll
+F:\Escritorio\BancoDeTiempo\bin\Debug\EntityFramework.xml
+F:\Escritorio\BancoDeTiempo\bin\Debug\EntityFramework.SqlServer.xml
+F:\Escritorio\BancoDeTiempo\obj\Debug\BancoDeTiempo.csproj.AssemblyReference.cache
+F:\Escritorio\BancoDeTiempo\obj\Debug\BancoDeTiempo.csproj.SuggestedBindingRedirects.cache
+F:\Escritorio\BancoDeTiempo\obj\Debug\BancoDeTiempo.Forms.UsrAddEdit.resources
+F:\Escritorio\BancoDeTiempo\obj\Debug\BancoDeTiempo.Properties.Resources.resources
+F:\Escritorio\BancoDeTiempo\obj\Debug\BancoDeTiempo.csproj.GenerateResource.cache
+F:\Escritorio\BancoDeTiempo\obj\Debug\BancoDeTiempo.csproj.CoreCompileInputs.cache
+F:\Escritorio\BancoDeTiempo\obj\Debug\BancoDeTiempo.csproj.CopyComplete
+F:\Escritorio\BancoDeTiempo\obj\Debug\BancoDeTiempo.exe
+F:\Escritorio\BancoDeTiempo\obj\Debug\BancoDeTiempo.pdb
+F:\Escritorio\BancoDeTiempo\obj\Debug\BancoDeTiempo.Forms.MenuOfertas.resources
+F:\Escritorio\BancoDeTiempo\obj\Debug\BancoDeTiempo.MenuPrincipal.resources
+F:\Escritorio\BancoDeTiempo\obj\Debug\BancoDeTiempo.Forms.MenuDemanda.resources
+F:\Escritorio\BancoDeTiempo\obj\Debug\BancoDeTiempo.Forms.AnuAdd.resources
+C:\Users\Usuario\Desktop\Tecnicas de persistencia de datos con .NET\BancoDeTiempo\bin\Debug\BancoDeTiempo.exe.config
+C:\Users\Usuario\Desktop\Tecnicas de persistencia de datos con .NET\BancoDeTiempo\bin\Debug\BancoDeTiempo.exe
+C:\Users\Usuario\Desktop\Tecnicas de persistencia de datos con .NET\BancoDeTiempo\bin\Debug\BancoDeTiempo.pdb
+C:\Users\Usuario\Desktop\Tecnicas de persistencia de datos con .NET\BancoDeTiempo\bin\Debug\EntityFramework.dll
+C:\Users\Usuario\Desktop\Tecnicas de persistencia de datos con .NET\BancoDeTiempo\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Usuario\Desktop\Tecnicas de persistencia de datos con .NET\BancoDeTiempo\bin\Debug\EntityFramework.xml
+C:\Users\Usuario\Desktop\Tecnicas de persistencia de datos con .NET\BancoDeTiempo\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Usuario\Desktop\Tecnicas de persistencia de datos con .NET\BancoDeTiempo\obj\Debug\BancoDeTiempo.csproj.AssemblyReference.cache
+C:\Users\Usuario\Desktop\Tecnicas de persistencia de datos con .NET\BancoDeTiempo\obj\Debug\BancoDeTiempo.csproj.SuggestedBindingRedirects.cache
+C:\Users\Usuario\Desktop\Tecnicas de persistencia de datos con .NET\BancoDeTiempo\obj\Debug\BancoDeTiempo.MenuPrincipal.resources
+C:\Users\Usuario\Desktop\Tecnicas de persistencia de datos con .NET\BancoDeTiempo\obj\Debug\BancoDeTiempo.Forms.AnuAdd.resources
+C:\Users\Usuario\Desktop\Tecnicas de persistencia de datos con .NET\BancoDeTiempo\obj\Debug\BancoDeTiempo.Forms.MenuDemanda.resources
+C:\Users\Usuario\Desktop\Tecnicas de persistencia de datos con .NET\BancoDeTiempo\obj\Debug\BancoDeTiempo.Forms.MenuOfertas.resources
+C:\Users\Usuario\Desktop\Tecnicas de persistencia de datos con .NET\BancoDeTiempo\obj\Debug\BancoDeTiempo.Forms.UsrAddEdit.resources
+C:\Users\Usuario\Desktop\Tecnicas de persistencia de datos con .NET\BancoDeTiempo\obj\Debug\BancoDeTiempo.Properties.Resources.resources
+C:\Users\Usuario\Desktop\Tecnicas de persistencia de datos con .NET\BancoDeTiempo\obj\Debug\BancoDeTiempo.csproj.GenerateResource.cache
+C:\Users\Usuario\Desktop\Tecnicas de persistencia de datos con .NET\BancoDeTiempo\obj\Debug\BancoDeTiempo.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\Desktop\Tecnicas de persistencia de datos con .NET\BancoDeTiempo\obj\Debug\BancoDeTiempo.csproj.CopyComplete
+C:\Users\Usuario\Desktop\Tecnicas de persistencia de datos con .NET\BancoDeTiempo\obj\Debug\BancoDeTiempo.exe
+C:\Users\Usuario\Desktop\Tecnicas de persistencia de datos con .NET\BancoDeTiempo\obj\Debug\BancoDeTiempo.pdb
+C:\Users\Usuario\Desktop\Tecnicas de persistencia de datos con .NET\BancoDeTiempo\obj\Debug\BancoDeTiempo.Forms.FormularioRegistro.resources
+C:\Users\Usuario\Desktop\Tecnicas de persistencia de datos con .NET\BancoDeTiempo\obj\Debug\BancoDeTiempo.Forms.Login.resources
+C:\Users\Usuario\Desktop\Tecnicas de persistencia de datos con .NET\BancoDeTiempo\obj\Debug\BancoDeTiempo.Forms.RecuperarContraseña.resources
+F:\Escritorio\BancoDeTiempo_Erica\BancoDeTiempo\bin\Debug\BancoDeTiempo.exe.config
+F:\Escritorio\BancoDeTiempo_Erica\BancoDeTiempo\bin\Debug\BancoDeTiempo.exe
+F:\Escritorio\BancoDeTiempo_Erica\BancoDeTiempo\bin\Debug\BancoDeTiempo.pdb
+F:\Escritorio\BancoDeTiempo_Erica\BancoDeTiempo\bin\Debug\EntityFramework.dll
+F:\Escritorio\BancoDeTiempo_Erica\BancoDeTiempo\bin\Debug\EntityFramework.SqlServer.dll
+F:\Escritorio\BancoDeTiempo_Erica\BancoDeTiempo\bin\Debug\EntityFramework.xml
+F:\Escritorio\BancoDeTiempo_Erica\BancoDeTiempo\bin\Debug\EntityFramework.SqlServer.xml
+F:\Escritorio\BancoDeTiempo_Erica\BancoDeTiempo\obj\Debug\BancoDeTiempo.csproj.AssemblyReference.cache
+F:\Escritorio\BancoDeTiempo_Erica\BancoDeTiempo\obj\Debug\BancoDeTiempo.csproj.SuggestedBindingRedirects.cache
+F:\Escritorio\BancoDeTiempo_Erica\BancoDeTiempo\obj\Debug\BancoDeTiempo.Forms.FormularioRegistro.resources
+F:\Escritorio\BancoDeTiempo_Erica\BancoDeTiempo\obj\Debug\BancoDeTiempo.Forms.Login.resources
+F:\Escritorio\BancoDeTiempo_Erica\BancoDeTiempo\obj\Debug\BancoDeTiempo.MenuPrincipal.resources
+F:\Escritorio\BancoDeTiempo_Erica\BancoDeTiempo\obj\Debug\BancoDeTiempo.Forms.AnuAdd.resources
+F:\Escritorio\BancoDeTiempo_Erica\BancoDeTiempo\obj\Debug\BancoDeTiempo.Forms.MenuDemanda.resources
+F:\Escritorio\BancoDeTiempo_Erica\BancoDeTiempo\obj\Debug\BancoDeTiempo.Forms.MenuOfertas.resources
+F:\Escritorio\BancoDeTiempo_Erica\BancoDeTiempo\obj\Debug\BancoDeTiempo.Forms.RecuperarContraseña.resources
+F:\Escritorio\BancoDeTiempo_Erica\BancoDeTiempo\obj\Debug\BancoDeTiempo.Forms.UsrAddEdit.resources
+F:\Escritorio\BancoDeTiempo_Erica\BancoDeTiempo\obj\Debug\BancoDeTiempo.Properties.Resources.resources
+F:\Escritorio\BancoDeTiempo_Erica\BancoDeTiempo\obj\Debug\BancoDeTiempo.csproj.GenerateResource.cache
+F:\Escritorio\BancoDeTiempo_Erica\BancoDeTiempo\obj\Debug\BancoDeTiempo.csproj.CoreCompileInputs.cache
+F:\Escritorio\BancoDeTiempo_Erica\BancoDeTiempo\obj\Debug\BancoDeTiempo.csproj.CopyComplete
+F:\Escritorio\BancoDeTiempo_Erica\BancoDeTiempo\obj\Debug\BancoDeTiempo.exe
+F:\Escritorio\BancoDeTiempo_Erica\BancoDeTiempo\obj\Debug\BancoDeTiempo.pdb
+F:\Escritorio\BancoDeTiempo_Erica\BancoDeTiempo\obj\Debug\BancoDeTiempo.Forms.MenuMensaje.resources
+F:\Escritorio\BancoDeTiempo_Erica\BancoDeTiempo\obj\Debug\BancoDeTiempo.Forms.BandejaEntrada.resources
+F:\Escritorio\BancoDeTiempo_Erica\BancoDeTiempo\obj\Debug\BancoDeTiempo.Forms.MenuMiAnuncio.resources
+F:\Escritorio\BancoDeTiempo (1)\BancoDeTiempo\bin\Debug\BancoDeTiempo.exe.config
+F:\Escritorio\BancoDeTiempo (1)\BancoDeTiempo\bin\Debug\BancoDeTiempo.exe
+F:\Escritorio\BancoDeTiempo (1)\BancoDeTiempo\bin\Debug\BancoDeTiempo.pdb
+F:\Escritorio\BancoDeTiempo (1)\BancoDeTiempo\bin\Debug\EntityFramework.dll
+F:\Escritorio\BancoDeTiempo (1)\BancoDeTiempo\bin\Debug\EntityFramework.SqlServer.dll
+F:\Escritorio\BancoDeTiempo (1)\BancoDeTiempo\bin\Debug\EntityFramework.xml
+F:\Escritorio\BancoDeTiempo (1)\BancoDeTiempo\bin\Debug\EntityFramework.SqlServer.xml
+F:\Escritorio\BancoDeTiempo (1)\BancoDeTiempo\obj\Debug\BancoDeTiempo.csproj.AssemblyReference.cache
+F:\Escritorio\BancoDeTiempo (1)\BancoDeTiempo\obj\Debug\BancoDeTiempo.csproj.SuggestedBindingRedirects.cache
+F:\Escritorio\BancoDeTiempo (1)\BancoDeTiempo\obj\Debug\BancoDeTiempo.Forms.BandejaEntrada.resources
+F:\Escritorio\BancoDeTiempo (1)\BancoDeTiempo\obj\Debug\BancoDeTiempo.Forms.FormularioRegistro.resources
+F:\Escritorio\BancoDeTiempo (1)\BancoDeTiempo\obj\Debug\BancoDeTiempo.Forms.Login.resources
+F:\Escritorio\BancoDeTiempo (1)\BancoDeTiempo\obj\Debug\BancoDeTiempo.Forms.MenuMensaje.resources
+F:\Escritorio\BancoDeTiempo (1)\BancoDeTiempo\obj\Debug\BancoDeTiempo.Forms.MenuMiAnuncio.resources
+F:\Escritorio\BancoDeTiempo (1)\BancoDeTiempo\obj\Debug\BancoDeTiempo.MenuPrincipal.resources
+F:\Escritorio\BancoDeTiempo (1)\BancoDeTiempo\obj\Debug\BancoDeTiempo.Forms.AnuAdd.resources
+F:\Escritorio\BancoDeTiempo (1)\BancoDeTiempo\obj\Debug\BancoDeTiempo.Forms.MenuDemanda.resources
+F:\Escritorio\BancoDeTiempo (1)\BancoDeTiempo\obj\Debug\BancoDeTiempo.Forms.MenuOfertas.resources
+F:\Escritorio\BancoDeTiempo (1)\BancoDeTiempo\obj\Debug\BancoDeTiempo.Forms.RecuperarContraseña.resources
+F:\Escritorio\BancoDeTiempo (1)\BancoDeTiempo\obj\Debug\BancoDeTiempo.Forms.UsrAddEdit.resources
+F:\Escritorio\BancoDeTiempo (1)\BancoDeTiempo\obj\Debug\BancoDeTiempo.Properties.Resources.resources
+F:\Escritorio\BancoDeTiempo (1)\BancoDeTiempo\obj\Debug\BancoDeTiempo.csproj.GenerateResource.cache
+F:\Escritorio\BancoDeTiempo (1)\BancoDeTiempo\obj\Debug\BancoDeTiempo.csproj.CoreCompileInputs.cache
+F:\Escritorio\BancoDeTiempo (1)\BancoDeTiempo\obj\Debug\BancoDeTiempo.csproj.CopyComplete
+F:\Escritorio\BancoDeTiempo (1)\BancoDeTiempo\obj\Debug\BancoDeTiempo.exe
+F:\Escritorio\BancoDeTiempo (1)\BancoDeTiempo\obj\Debug\BancoDeTiempo.pdb
+F:\Escritorio\BancoDeTiempo\obj\Debug\BancoDeTiempo.Forms.BandejaEntrada.resources
+F:\Escritorio\BancoDeTiempo\obj\Debug\BancoDeTiempo.Forms.FormularioRegistro.resources
+F:\Escritorio\BancoDeTiempo\obj\Debug\BancoDeTiempo.Forms.Login.resources
+F:\Escritorio\BancoDeTiempo\obj\Debug\BancoDeTiempo.Forms.MenuMensaje.resources
+F:\Escritorio\BancoDeTiempo\obj\Debug\BancoDeTiempo.Forms.MenuMiAnuncio.resources
+F:\Escritorio\BancoDeTiempo\obj\Debug\BancoDeTiempo.Forms.RecuperarContraseña.resources
